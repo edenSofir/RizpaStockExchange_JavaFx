@@ -1,0 +1,15 @@
+.border-Pane-root {
+    -fx-background-repeat: stretch;
+    -fx-background-size: 900 650;
+    -fx-background-position: center center;
+}
+.scroll-pane > .viewport{
+    -fx-background-color : transparent;
+}
+.scroll-pane{
+    -fx-background-color: transparent ;
+}
+#scroll-Pane{
+    -fx-background-color: #FAEBD7;
+}
+

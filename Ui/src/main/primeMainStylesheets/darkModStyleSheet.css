@@ -1,0 +1,18 @@
+#scroll-Pane {
+    -fx-background-color: #2f4f4f;
+}
+.border-Pane-root{
+    -fx-background-repeat: stretch;
+    -fx-background-size: 900 650;
+    -fx-background-position: center center;
+}
+.scroll-pane > .viewport{
+    -fx-background-color : transparent;
+}
+.scroll-pane{
+    -fx-background-color: transparent ;
+}
+#headerComponent{
+    -fx-text-file: DarkGrey;
+    -fx-font-family: cinzel;
+}

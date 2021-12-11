@@ -1,0 +1,49 @@
+.information-label{
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-text-fill: black;
+}
+#title{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 25;
+}
+.dataUI{
+    -fx-text-fill: black;
+}
+#nameFile{
+    -fx-font-family: "Comic Sans MS";
+    -fx-text-fill: black;
+}
+.ButtonsToLoad:hover {
+    -fx-background-color: #CD853F;
+    -fx-font-weight:bold ;
+}
+.ButtonsToLoad{
+    -fx-font-family: "Comic Sans MS";
+    -fx-background-color: linear-gradient(#f2f2f2, #d6d6d6), linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%), linear-gradient(#dddddd 0%, #f6f6f6 50%);
+    -fx-background-radius: 8, 7, 6;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+.scroll-pane > .viewport{
+    -fx-background-color : transparent;
+}
+.scroll-pane{
+    -fx-background-color: transparent ;
+}
+#taskProgressBar{
+    -fx-background-color: linear-gradient(#f2f2f2, #d6d6d6), linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%), linear-gradient(#dddddd 0%, #f6f6f6 50%);
+    -fx-background-radius: 8, 7, 6;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+
+.label{
+    -fx-text-fill: black;
+    -fx-font-family: "Comic Sans MS";
+}
+
+

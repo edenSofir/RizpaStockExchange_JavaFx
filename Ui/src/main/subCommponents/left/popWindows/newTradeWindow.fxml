@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane stylesheets="@popWindowStyleSheets/popWindow.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.subCommponents.left.popWindows.TradeController" id="ScrollPaneTrade">
+   <content>
+      <AnchorPane id="AnchorPaneTrade" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="510.0">
+         <children>
+            <FlowPane id="flowPaneStyle" maxHeight="380.0" maxWidth="510.0" minHeight="370.0" minWidth="510.0" prefHeight="380.0" prefWidth="510.0">
+               <children>
+                  <VBox prefHeight="381.0" prefWidth="510.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="520.0" styleClass="lablez , createNewTrade" text="Create New Trade..." textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold Italic" size="35.0" />
+                           </font>
+                        </Label>
+                        <GridPane id="gridPaneStyle" alignment="CENTER" minWidth="460.0" prefHeight="331.0" prefWidth="460.0" VBox.vgrow="ALWAYS">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="0.0" prefWidth="0.0" />
+                              <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="196.0" minWidth="10.0" prefWidth="196.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="0.0" prefWidth="80.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="10.0" prefWidth="66.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="0.0" prefWidth="56.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="72.0" minWidth="10.0" prefWidth="72.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" prefWidth="22.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="28.0" minHeight="23.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="34.0" minHeight="23.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="26.0" minHeight="18.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="24.0" minHeight="9.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" maxHeight="40.0" minHeight="32.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="23.0" minHeight="21.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="50.0" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label styleClass="lablez" text="what's your trade type ?" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <RadioButton fx:id="BuyRadioButton" mnemonicParsing="false" onAction="#BuyActionType" styleClass="lablez" text="Buy" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="TradeType" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="SellRadioButton" mnemonicParsing="false" onAction="#SellActionType" styleClass="lablez" text="Sell" toggleGroup="$TradeType" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="20.0" right="10.0" />
+                                 </padding>
+                              </RadioButton>
+                              <Label styleClass="lablez" text="Select stock to trade :" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <ComboBox fx:id="StockComboBox" disable="true" onAction="#SelectStockBox" prefWidth="150.0" promptText="Select .." styleClass="lablez , combo-box-style , data-Holders" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                                 <styleClass>
+                                    <String fx:value="lablez" />
+                                    <String fx:value="combo-box-style" />
+                                 </styleClass>
+                              </ComboBox>
+                              <Label styleClass="lablez" text="what's yout command type ? " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <HBox maxHeight="30.0" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label maxHeight="30.0" prefHeight="30.0" styleClass="lablez" text="Hey ," />
+                                    <Label fx:id="UserPlaceHolder" maxHeight="30.0" prefHeight="30.0" styleClass="lablez" />
+                                    <Label maxHeight="30.0" prefHeight="30.0" styleClass="lablez" text="!" />
+                                 </children>
+                              </HBox>
+                              <RadioButton fx:id="LmtRadioButton" disable="true" mnemonicParsing="false" onAction="#PressLmtButton" styleClass="lablez" text="LMT" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="CommandType" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="MktRadioButton" disable="true" mnemonicParsing="false" onAction="#pressMktButton" styleClass="lablez" text="MKT" toggleGroup="$CommandType" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <padding>
+                                    <Insets left="20.0" right="10.0" />
+                                 </padding>
+                              </RadioButton>
+                              <Label prefHeight="17.0" prefWidth="327.0" styleClass="lablez" text="what's the amount of shares you want to trade on :" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4" />
+                              <Button fx:id="ApplyButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#ApplyButtonPushed" prefHeight="25.0" prefWidth="100.0" styleClass="lablez , buttons" text="Apply" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="6">
+                                 <GridPane.margin>
+                                    <Insets left="50.0" right="20.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Label fx:id="TextRes" styleClass="lablez" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="LimitWordLabel" alignment="CENTER" styleClass="lablez" text="Limit :" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets left="45.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="writeLimitHolder" disable="true" onAction="#WriteLimitAction" styleClass="lablez , data-Holders" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets left="30.0" right="30.0" top="3.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="4">
+                                 <children>
+                                    <TextField fx:id="AmountTextHolder" onAction="#WriteAmountAction" styleClass="lablez , data-Holders" />
+                                    <Slider fx:id="SliderAmount" blockIncrement="0.0" majorTickUnit="200.0" min="1.0" minorTickCount="0" prefHeight="14.0" prefWidth="146.0" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </GridPane.margin>
+                              </VBox>
+                              <Label fx:id="amountSlider" styleClass="lablez , data-Holders" GridPane.columnIndex="5" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets left="45.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="7" GridPane.rowSpan="2147483647">
+                                 <children>
+                                    <ScrollPane layoutY="7.0" prefHeight="101.0" prefWidth="459.0">
+                                       <content>
+                                          <VBox prefHeight="463.0" prefWidth="1170.0">
+                                             <children>
+                                                <Label fx:id="textInformation" alignment="TOP_LEFT" styleClass="data-Holders" VBox.vgrow="ALWAYS" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets top="20.0" />
+                                 </GridPane.margin>
+                              </AnchorPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="40.0" />
+                           </VBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </GridPane>
+                        <Button fx:id="closeWinButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#closeStage" styleClass="buttons" text="close window" visible="false">
+                           <VBox.margin>
+                              <Insets left="220.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </FlowPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

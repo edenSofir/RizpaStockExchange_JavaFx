@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<ScrollPane id="scroll-Pane" fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" snapToPixel="false" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.PrimMainController">
+   <content>
+      <BorderPane maxWidth="1.7976931348623157E308" prefHeight="569.0" prefWidth="850.0" styleClass="border-Pane-root">
+         <top>
+            <fx:include fx:id="headerComponent" source="subCommponents/header/Header.fxml" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <fx:include fx:id="bodyComponent" source="subCommponents/body/Body.fxml" BorderPane.alignment="CENTER" />
+         </center>
+         <left>
+            <TabPane fx:id="leftComponent" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="421.0" prefWidth="292.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER_LEFT" />
+         </left>
+      </BorderPane>
+   </content>
+</ScrollPane>

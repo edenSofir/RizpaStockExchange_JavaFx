@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="fullHeader" maxWidth="-Infinity" prefWidth="860.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.subCommponents.header.HeaderController">
+   <children>
+      <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" minWidth="250.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="131.0" prefWidth="860.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane maxWidth="1.7976931348623157E308">
+               <columnConstraints>
+                  <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="152.0" minWidth="0.0" prefWidth="10.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="152.0" minWidth="10.0" prefWidth="114.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="183.0" minWidth="0.0" prefWidth="97.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="502.0" minWidth="10.0" prefWidth="502.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="159.0" minWidth="10.0" prefWidth="16.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="129.0" minWidth="10.0" prefWidth="129.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="129.0" minWidth="0.0" prefWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="ALWAYS" />
+               </rowConstraints>
+               <children>
+                  <Label id="title" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="399.0" styleClass="information-label" text="Rizpa Stock Exchange" textAlignment="CENTER" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="System Bold Italic" size="28.0" />
+                     </font>
+                  </Label>
+                  <MenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" styleClass="ButtonsToLoad" text="Skin Replacement" GridPane.columnIndex="5">
+                    <items>
+                      <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <ToggleButton mnemonicParsing="false" onAction="#defultThemeChosen" styleClass="ButtonsToLoad" text="Defult Theme" />
+                           </graphic></MenuItem>
+                      <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <ToggleButton mnemonicParsing="false" onAction="#lightThemeChosen" styleClass="ButtonsToLoad" text="Light Theme" />
+                           </graphic></MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <ToggleButton mnemonicParsing="false" onAction="#DarkThemeChosen" styleClass="ButtonsToLoad" text="Dark Theme" />
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                  </MenuButton>
+               </children>
+            </GridPane>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="30.0" spacing="100.0" GridPane.columnIndex="1">
+                     <children>
+                        <Button fx:id="openFileButton" alignment="CENTER" mnemonicParsing="false" onAction="#openFileListner" prefHeight="37.0" prefWidth="119.0" styleClass="ButtonsToLoad" text="Open file" HBox.hgrow="SOMETIMES">
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </Button>
+                        <Button fx:id="pressToLoadButton" disable="true" mnemonicParsing="false" onAction="#LoadListener" prefHeight="37.0" prefWidth="119.0" styleClass="ButtonsToLoad" text="Press to load file" HBox.hgrow="SOMETIMES" />
+                     </children>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="1130.0" minWidth="145.0" prefWidth="197.0" />
+                  <ColumnConstraints maxWidth="1015.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1015.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1015.0" minWidth="10.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="717.0" minWidth="0.0" prefWidth="200.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="15.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="21.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="17.0" vgrow="ALWAYS" />
+               </rowConstraints>
+               <children>
+                  <Label id="nameFile" fx:id="selectedFileName" prefHeight="17.0" prefWidth="272.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.hgrow="ALWAYS" />
+                  <Label styleClass="information-label" text="File :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="20.0" prefWidth="123.0" styleClass="information-label" text="text status :" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label styleClass="information-label" text="status progress" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ProgressBar fx:id="taskProgressBar" prefHeight="18.0" prefWidth="518.0" progress="0.0" styleClass="dataUI" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label fx:id="percentLabel" prefHeight="17.0" prefWidth="83.0" styleClass="dataUI" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="messageLabelTask" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

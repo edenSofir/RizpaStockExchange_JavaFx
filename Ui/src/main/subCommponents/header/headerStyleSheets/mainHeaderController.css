@@ -1,0 +1,41 @@
+.information-label{
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-text-fill: snow;
+}
+#title{
+    -fx-font-family: "Papyrus";
+    -fx-font-size: 25;
+}
+.dataUI{
+    -fx-text-fill: #150e56;
+}
+#nameFile{
+    -fx-text-fill: #c449c2;;
+}
+.ButtonsToLoad:hover {
+    -fx-background-color: #b8b5ff;
+    -fx-font-weight:bold ;
+}
+.ButtonsToLoad{
+    -fx-background-color: linear-gradient(#f2f2f2, #d6d6d6), linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%), linear-gradient(#dddddd 0%, #f6f6f6 50%);
+    -fx-background-radius: 12, 7, 6 , 4;
+    -fx-background-insets: 0, 1, 2 ,3;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+.scroll-pane > .viewport{
+    -fx-background-color : transparent;
+}
+.scroll-pane{
+    -fx-background-color: transparent ;
+}
+#taskProgressBar{
+    -fx-background-color: linear-gradient(#f2f2f2, #d6d6d6), linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%), linear-gradient(#dddddd 0%, #f6f6f6 50%);
+    -fx-background-radius: 8, 7, 6;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+

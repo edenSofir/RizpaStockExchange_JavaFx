@@ -1,0 +1,35 @@
+#AnchorPaneBody{
+    -fx-font-weight: bold;
+}
+#ComboBoxBody:hover{
+    -fx-background-color: #696969;;
+}
+
+.ScrollPaneBody{ //
+    -fx-border-color: #0db4ea;
+}
+
+.button{
+    -fx-font-family: "Bookman Old Style";
+    -fx-background-color: #3cc5f1;
+    -fx-background-radius: 8, 7, 6;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+#ComboBoxBody{
+    -fx-font-family: "Bookman Old Style";
+    -fx-background-color: #3cc5f1;
+    -fx-background-radius: 8, 7, 6;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+#Grid-Pane-body{
+    -fx-text-fill: white;
+}
+
+.label{
+    -fx-text-fill: snow;
+    -fx-font-family: "Bookman Old Style";
+}

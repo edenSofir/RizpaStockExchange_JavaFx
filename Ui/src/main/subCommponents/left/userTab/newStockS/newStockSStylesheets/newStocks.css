@@ -1,0 +1,17 @@
+.labels {
+    -fx-underline: true;
+    -fx-font-family: "Arial Black";
+}
+#SymbolNameLabel{
+    -fx-text-fill: red;
+}
+#QuantityLabel{
+    -fx-text-fill: red;
+}
+#StockRateLabel{
+    -fx-text-fill: red;
+
+}
+#Grid-Pane-root{
+    -fx-background-image:url("173bc5119dd188f88d4a66752e7b1f3b.jpg");
+}
